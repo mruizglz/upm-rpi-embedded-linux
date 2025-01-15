@@ -1,0 +1,108 @@
+
+\begin{frame}
+  \frametitle{kgdb - A kernel debugger}
+  \begin{itemize}
+  \item \kconfig{CONFIG_KGDB} in {\em Kernel hacking}.
+  \item The execution of the kernel is fully controlled by \code{gdb}
+    from another machine, connected through a serial line.
+  \item Can do almost everything, including inserting breakpoints in
+    interrupt handlers.
+  \item Feature supported for the most popular CPU architectures
+  \item \kconfig{CONFIG_GDB_SCRIPTS} allows to build GDB python scripts that are
+    provided by the kernel.
+  \begin{itemize}
+    \item See \kdochtml{dev-tools/gdb-kernel-debugging} for more information
+  \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\ifthenelse{\equal{\training}{debugging}}{
+
+\begin{frame}
+  \frametitle{kgdb kernel config}
+  \begin{itemize}
+    \item \kconfigval{CONFIG_DEBUG_KERNEL}{y} to make KGDB support visible
+    \item \kconfigval{CONFIG_KGDB}{y} to enable KGDB support
+    \item \kconfigval{CONFIG_DEBUG_INFO}{y} to compile the kernel with debug info (\code{-g})
+    \item \kconfigval{CONFIG_FRAME_POINTER}{y} to have more reliable
+          stacktraces
+    \item \kconfigval{CONFIG_KGDB_SERIAL_CONSOLE}{y} to enable KGDB support
+          over serial
+    \item \kconfigval{CONFIG_GDB_SCRIPTS}{y} to enable kernel GDB python
+          scripts
+    \item \kconfigval{CONFIG_RANDOMIZE_BASE}{n} to disable KASLR
+    \item \kconfigval{CONFIG_WATCHDOG}{n} to disable watchdog
+    \item \kconfigval{CONFIG_MAGIC_SYSRQ}{y} to enable Magic SysReq support
+    \item \kconfigval{CONFIG_STRICT_KERNEL_RWX}{n} to disable memory protection
+          on code section, thus allowing to put breakpoints
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{kgdb pitfalls}
+  \begin{itemize}
+    \item KASLR should be disabled to avoid confusing gdb with randomized kernel
+          addresses
+    \begin{itemize}
+      \item Disable \em{kaslr} mode using \code{nokaslr} command line parameter
+            if enabled in your kernel.
+    \end{itemize}
+    \item Disable the platform watchdog to avoid rebooting while debugging.
+    \begin{itemize}
+      \item When interrupted by KGDB, all interrupts are disabled thus, the
+            watchdog is not serviced.
+      \item Sometimes, watchdog is enabled by upper boot levels. Make sure to
+            disable the watchdog there too.
+    \end{itemize}
+    \item Can not interrupt kernel execution from gdb using \code{interrupt}
+          command or \code{Ctrl + C}.
+    \item Not possible to break everywhere (see \kconfig{CONFIG_KGDB_HONOUR_BLOCKLIST}).
+    \item Need a console driver with polling support.
+    \item Some architecture lacks functionalities (No watchpoints on arm32 for
+          instance) and some instabilities might happen!
+  \end{itemize}
+\end{frame}
+}{}
+
+\begin{frame}
+  \frametitle{Using kgdb (1/2)}
+  \begin{itemize}
+  \item Details available in the kernel documentation:
+    \kdochtml{dev-tools/kgdb}
+  \item You must include a kgdb I/O driver. One of them is \code{kgdb} over
+    serial console (\code{kgdboc}: \code{kgdb} over console, enabled by
+    \kconfig{CONFIG_KGDB_SERIAL_CONSOLE})
+  \item Configure \code{kgdboc} at boot time by passing to the kernel:
+    \begin{itemize}
+    \item \code{kgdboc=<tty-device>,<bauds>}.
+    \item For example: \code{kgdboc=ttyS0,115200}
+    \end{itemize}
+  \item Or at runtime using sysfs:
+   \begin{itemize}
+   \item \code{echo ttyS0 > /sys/module/kgdboc/parameters/kgdboc}
+   \item If the console does not have polling support, this command will yield
+         an error.
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Using kgdb (2/2)}
+  \begin{itemize}
+  \item Then also pass \code{kgdbwait} to the kernel: it makes
+    \code{kgdb} wait for a debugger connection.
+  \item Boot your kernel, and when the console is initialized,
+    interrupt the kernel with a break character and then \code{g}
+    in the serial console (see our {\em Magic SysRq} explanations).
+  \item On your workstation, start \code{gdb} as follows:
+    \begin{itemize}
+    \item \code{arm-linux-gdb ./vmlinux}
+    \item \code{(gdb) set remotebaud 115200}
+    \item \code{(gdb) target remote /dev/ttyS0}
+    \end{itemize}
+  \item Once connected, you can debug a kernel the way you would debug
+    an application program.
+  \item On GDB side, the first threads represent the CPU context (ShadowCPU<x>),
+    then all the other threads represents a task.
+  \end{itemize}
+\end{frame}

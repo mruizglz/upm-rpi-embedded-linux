@@ -1,0 +1,35 @@
+% Common Bootlin commands
+\newcommand\manpage[2]{\href{https://man7.org/linux/man-pages/man#2/#1.#2.html}{\codelink{man #2 #1}}}
+
+% Generic Elixir commands
+\newcommand\projdir[2]{\href{https://elixir.bootlin.com/#1/latest/source/#2/}{\codelink{#2/}}}
+\newcommand\projfile[2]{\href{https://elixir.bootlin.com/#1/latest/source/#2}{\codelink{#2}}}
+\newcommand\projsym[2]{\href{https://elixir.bootlin.com/#1/latest/ident/#2}{\codelink{#2}}}
+\newcommand\projfunc[2]{\href{https://elixir.bootlin.com/#1/latest/ident/#2}{\codelink{#2()}}}
+\newcommand\projconfig[2]{\href{https://elixir.bootlin.com/#1/latest/K/ident/#2}{\codelink{#2}}}
+\newcommand\projconfigval[3]{\href{https://elixir.bootlin.com/#1/latest/K/ident/#2}{\codelink{#2=#3}}}
+\newcommand\projconfignotset[2]{\href{https://elixir.bootlin.com/#1/latest/K/ident/#2}{\codelink{## #2 is not set}}}
+
+% Linux Elixir commands
+\newcommand\kfunc[1]{\href{https://elixir.bootlin.com/linux/latest/ident/#1}{\codelink{#1()}}}
+\newcommand\ksym[1]{\href{https://elixir.bootlin.com/linux/latest/ident/#1}{\codelink{#1}}}
+\newcommand\kcompat[2]{\href{https://elixir.bootlin.com/linux/latest/B/ident/#1}{\codelink{#2}}}
+\newcommand\kstruct[1]{\href{https://elixir.bootlin.com/linux/latest/ident/#1}{\codelink{struct #1}}}
+\newcommand\kfile[1]{\projfile{linux}{#1}}
+\newcommand\krelfile[2]{\href{https://elixir.bootlin.com/linux/latest/source/#1/#2}{\codelink{#2}}} % For relative file paths
+\newcommand\kfileversion[2]{\href{https://elixir.bootlin.com/linux/v#2/source/#1}{\codelink{#1}}}
+\newcommand\kdir[1]{\projdir{linux}{#1}}
+\newcommand\kreldir[2]{\href{https://elixir.bootlin.com/linux/latest/source/#1/#2}{\codelink{#2/}}} % For relative directory paths
+\newcommand\ksubarch[1]{\href{https://elixir.bootlin.com/linux/latest/source/arch/#1/}{\codelink{#1}}}
+\newcommand\kconfig[1]{\href{https://elixir.bootlin.com/linux/latest/K/ident/#1}{\codelink{#1}}}
+\newcommand\kconfigval[2]{\href{https://elixir.bootlin.com/linux/latest/K/ident/#1}{\codelink{#1=#2}}}
+\newcommand\kconfignotset[1]{\href{https://elixir.bootlin.com/linux/latest/K/ident/#1}{\codelink{## #1 is not set}}}
+\newcommand\kdoctext[1]{\href{https://kernel.org/doc/Documentation/#1}{\codelink{Documentation/#1}}}
+\newcommand\kdochtml[1]{\href{https://www.kernel.org/doc/html/latest/#1.html}{\codelink{#1}}}
+\newcommand\kdochtmldir[1]{\href{https://www.kernel.org/doc/html/latest/#1/}{\codelink{#1/}}}
+\newcommand\kdochtmlsection[3]{\href{https://www.kernel.org/doc/html/latest/#1/index.html\##2}{\codelink{#1} (section {\em #3})}}
+
+% Yocto commands
+\newcommand\yoctovar[1]{\href{https://docs.yoctoproject.org/ref-manual/variables.html\#term-#1}{\codelink{#1}}}
+
+

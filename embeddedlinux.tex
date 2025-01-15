@@ -1,0 +1,138 @@
+\documentclass[10pt,compress]{beamer}
+%\documentclass[fleqn,xcolor=dvipsnames]{beamer}
+\usetheme{Madrid}
+%\usetheme{Boadilla}
+%\usetheme{default}
+%\usetheme{Warsaw}
+%\usetheme{CambridgeUS}
+%\usetheme{Sybila}
+%\usetheme[hideothersubsections]{Berkeley}
+%\usetheme[hideothersubsections]{PaloAlto}
+%%\usetheme[hideothersubsections]{Goettingen}
+%\usetheme{CambridgeUS}
+%\usetheme{Bergen} % This template has nagivation on the left
+%\usetheme{Frankfurt} % Similar to the default with an extra region at the top.
+
+% Uncomment the following line if you want page numbers and using Warsaw theme%
+%\setbeamertemplate{footline}[page number]
+
+\definecolor{aggiemaroon}{RGB}{80,0,0} % Official RGB code for aggie maroon
+\usecolortheme[named=aggiemaroon]{structure}
+\useoutertheme{shadow}
+\useinnertheme{rounded}
+\setbeamertemplate{navigation symbols}{}
+\setbeamerfont{structure}{family=\rmfamily,series=\bfseries}
+\usefonttheme[stillsansseriftext]{serif}
+
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{graphicx,comment}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{listings}
+
+
+\usebackgroundtemplate{
+\tikz\node[opacity=0.035, rotate = 0] {\includegraphics[scale=0.5]{UPM-logo.png}};}
+%{\includegraphics[height=1in,width=1in]{TAM-Logo.png}};}
+
+
+\title[Universidad Politecnica de Madrid]{Embedded System Design with Raspberry-pi}
+
+\author [M. Ruiz]{Mariano Ruiz}
+
+\date[01/15/2025]{January 15, 2025}
+
+\institute[UPM] % (optional, but mostly needed)
+{\emph{Professor}, ETSI Sistemas de Telecomunicación \\
+ \includegraphics[scale=0.60]{UPM-logo.png} \\ [0.0 cm]
+ }
+
+
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+   % \frametitle{Section \thesection} %this add the section number only
+   \frametitle{\insertsectionhead}
+    \tableofcontents[currentsection, hideallsubsections]
+  \end{frame}
+}
+\newcommand{\codelink}[1]{\texttt{#1}}
+\newcommand{\code}[1] {\path{#1}}
+\newcommand\projdir[2]{\href{https://elixir.bootlin.com/#1/latest/source/#2/}{\codelink{#2/}}}
+\newcommand\kdir[1]{\projdir{linux}{#1}}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Overview} 
+%\tableofcontents
+%\end{frame}
+
+
+\graphicspath{{trainingmaterials/}}
+\input{trainingmaterials/slides/sysdev-intro/sysdev-intro}
+\input{trainingmaterials/slides/sysdev-dev-environment/sysdev-dev-environment}
+\input{trainingmaterials/slides/sysdev-toolchains-title/sysdev-toolchains-title}
+\input{trainingmaterials/slides/sysdev-toolchains-definition/sysdev-toolchains-definition}
+\input{trainingmaterials/slides/sysdev-toolchains-options/sysdev-toolchains-options}
+\input{trainingmaterials/slides/sysdev-toolchains-obtaining/sysdev-toolchains-obtaining}
+\input{trainingmaterials/slides/sysdev-bootloaders-title/sysdev-bootloaders-title}
+\input{trainingmaterials/slides/sysdev-bootloaders-sequence/sysdev-bootloaders-sequence}
+\input{trainingmaterials/slides/sysdev-linux-intro-title/sysdev-linux-intro-title}
+\input{trainingmaterials/slides/sysdev-linux-intro-features/sysdev-linux-intro-features}
+\input{trainingmaterials/slides/sysdev-linux-intro-versioning/sysdev-linux-intro-versioning}
+\input{trainingmaterials/slides/sysdev-linux-intro-sources/sysdev-linux-intro-sources}
+\input{trainingmaterials/slides/sysdev-kernel-building/sysdev-kernel-building}
+\input{trainingmaterials/slides/sysdev-kernel-booting/sysdev-kernel-booting}
+\input{trainingmaterials/slides/sysdev-root-filesystem-title/sysdev-root-filesystem-title}
+\input{trainingmaterials/slides/sysdev-root-filesystem-principles/sysdev-root-filesystem-principles}
+\input{trainingmaterials/slides/sysdev-root-filesystem-contents/sysdev-root-filesystem-contents}
+
+
+
+\begin{frame}{Conclusion}
+\begin{enumerate}
+\item Contribution of this dissertation into the field of Statistics.
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{References}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[Smith, 2012]{p1} John Doe (2012)
+\newblock Title of the Publication
+\newblock \emph{Journal Name} 1(1), 11 -- 111.
+\end{thebibliography}
+}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{}
+  \centering \Huge
+  \emph{Thank You!}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
+
+
+\end{document}

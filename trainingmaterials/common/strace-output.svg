@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2343.1428"
+   height="1174.5714"
+   id="svg2"
+   version="1.1"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="strace-output.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="727.14286"
+     inkscape:cy="862.85714"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0.5"
+     fit-margin-left="0.5"
+     fit-margin-right="0.5"
+     fit-margin-bottom="0.5"
+     inkscape:window-width="1635"
+     inkscape:window-height="911"
+     inkscape:window-x="67"
+     inkscape:window-y="56"
+     inkscape:window-maximized="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-45.071426,-223.41644)">
+    <rect
+       style="fill:#dcdcdc;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3909"
+       width="2337.1428"
+       height="1168.5714"
+       x="48.071426"
+       y="226.41644"
+       ry="57.142857" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="88.571426"
+       y="318.07648"
+       id="text2985"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="88.571426"
+         y="318.07648"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">&gt; strace cat Makefile</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="368.07648"
+         id="tspan2999"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">[...]</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="418.07648"
+         id="tspan3001"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">fstat64(<tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3799">3</tspan>, {st_mode=S_IFREG|0644, st_size=111585, ...}) = 0</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="468.07648"
+         id="tspan3003"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">mmap2(NULL, 111585, PROT_READ, MAP_PRIVATE, <tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3809">3</tspan>, 0) = 0xb7f69000</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="518.07648"
+         id="tspan3005"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">close(<tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3825">3</tspan>) = 0</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="568.07648"
+         id="tspan3007"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">access(&quot;/etc/ld.so.nohwcap&quot;, F_OK) = -1 ENOENT (No such file or directory)</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="618.07648"
+         id="tspan3009"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">open(&quot;/lib/tls/i686/cmov/libc.so.6&quot;, O_RDONLY) = <tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3837">3</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="668.07648"
+         id="tspan3011"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">read(<tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3839">3</tspan>, &quot;\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\320h\1\0004\0\0\0\344&quot;..., 512) = 512</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="718.07648"
+         id="tspan3013"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">fstat64(<tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3849">3</tspan>, {st_mode=S_IFREG|0755, st_size=1442180, ...}) = 0</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="768.07648"
+         id="tspan3015"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">mmap2(NULL, 1451632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, <tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3867">3</tspan>, 0) = 0xb7e06000</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="818.07648"
+         id="tspan3021"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">mprotect(0xb7f62000, 4096, PROT_NONE) = 0</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="868.07648"
+         id="tspan3023"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">mmap2(0xb7f66000, 9840, PROT_READ|PROT_WRITE,</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="918.07648"
+         id="tspan3025"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">      MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7f66000</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="968.07648"
+         id="tspan3027"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start">close(<tspan
+   style="font-weight:bold;-inkscape-font-specification:'Inconsolata Bold';fill:#ff0000;fill-opacity:1"
+   id="tspan3895">3</tspan>) = 0</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="1018.0765"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan298">[...]</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="1068.0764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan270">openat(AT_FDCWD, &quot;Makefile&quot;, O_RDONLY)  = <tspan
+   style="fill:#ff0000"
+   id="tspan336">3</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="1118.0764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan272">newfstatat(<tspan
+   style="fill:#ff0000"
+   id="tspan338">3</tspan>, &quot;&quot;, {st_mode=S_IFREG|0644, st_size=173, ...}, AT_EMPTY_PATH) = 0</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="1168.0764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan274">fadvise64(<tspan
+   style="fill:#ff0000"
+   id="tspan340">3</tspan>, 0, 0, POSIX_FADV_SEQUENTIAL) = 0</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="1218.0764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan276">mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f7290d28000</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="1268.0764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan278">read(<tspan
+   style="fill:#ff0000"
+   id="tspan342">3</tspan>, &quot;ifneq ($(KERNELRELEASE),)\nobj-m &quot;..., 131072) = 173</tspan><tspan
+         sodipodi:role="line"
+         x="88.571426"
+         y="1318.0764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Inconsolata;-inkscape-font-specification:Inconsolata;text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan280">write(<tspan
+   style="fill:#ff0000"
+   id="tspan344">1</tspan>, &quot;ifneq ($(KERNELRELEASE),)\nobj-m &quot;..., 173ifneq ($(KERNELRELEASE),)</tspan></text>
+  </g>
+</svg>

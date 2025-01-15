@@ -1,0 +1,96 @@
+\documentclass[a4wide]{book}
+
+\usepackage{labs}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+% Custom bootlin commands
+
+\definecolor{mygray}{rgb}{0.8,0.8,0.8}
+
+\lstset{
+  autogobble,
+  language=[LaTeX]TeX,
+  basicstyle=\ttfamily,
+  breaklines=true,
+  escapechar={\%},
+  belowskip=0pt,
+  columns=fullflexible
+}
+
+% Multi-line command environments ---------------------------------------------
+
+% The digits in 'alsoletter' are a workaround to avoid breaking things like
+% "bs=8M". Replacing 'alsoletter={...}' with 'breakatwhitespace=true' would
+% be the correct solution, but we have a very long line in at least one lab
+% (yocto BBB) that would overflow the page if we did.
+\lstnewenvironment{bashinput}{
+  \lstset{
+  prebreak=\textbackslash,
+  alsoletter={()[].=:-0123456789},
+}}{}
+
+\lstnewenvironment{terminaloutput}{\lstset{
+  breakautoindent=false,
+  alsoletter={()[].=:-},
+  breakindent=0pt,
+}}{}
+
+\lstnewenvironment{fileinput}{\lstset{
+  breakautoindent=false,
+  alsoletter={()[].=:-_},
+  breakindent=0pt,
+}}{}
+
+\lstnewenvironment{ubootinput}{\lstset{
+  alsoletter={()[].=:-_},
+}}{}
+
+% Background for muli-line environments
+
+\surroundwithmdframed[innerleftmargin=1pt,innerrightmargin=1pt,skipabove=\topskip,skipbelow=\topskip,linewidth=0pt,innertopmargin=1pt, innerbottommargin=1pt, backgroundcolor=blue!5]{ubootinput}
+
+\surroundwithmdframed[innerleftmargin=1pt,innerrightmargin=1pt,skipabove=\topskip,skipbelow=\topskip,linewidth=0pt,innertopmargin=1pt, innerbottommargin=1pt, backgroundcolor=lightgray!20]{bashinput}
+
+% inline commands -------------------------------------------------------------
+\def\inlinebash#1{%
+    \colorbox{lightgray!20}{\lstinline{#1}}%
+}
+
+\def\inlineuboot#1{
+    \colorbox{blue!5}{\lstinline{#1}}%
+}
+
+\def\inlinecode#1{%
+    {\lstinline{#1}}%
+}
+
+\def\inlinefile{\lstinline[basicstyle=\ttfamily]}
+
+% single line commands --------------------------------------------------------
+\newcommand\bashcmd[1]{\begin{mdframed}[innerleftmargin=1pt,innerrightmargin=1pt,skipabove=\topskip,skipbelow=\topskip,linewidth=0pt,innertopmargin=4pt, innerbottommargin=4pt,backgroundcolor=lightgray!20]{\lstinline{#1}}\end{mdframed}}
+
+\newcommand\ubootcmd[1]{\begin{mdframed}[innerleftmargin=1pt,innerrightmargin=1pt,skipabove=\topskip,skipbelow=\topskip,linewidth=0pt,innertopmargin=4pt, innerbottommargin=4pt,backgroundcolor=blue!5]{\lstinline[]{#1}}\end{mdframed}}
+
+
+% others... ------------------------------------------------------------------
+
+\newcommand{\sourcecode}[1]{\verbatimtabinput{../#1}{\small (Source code link:
+\url{https://raw.githubusercontent.com/bootlin/training-materials/master/#1})}}
+
+\title{\labbooktitle \\
+\vspace{0.5cm}
+\ifdefstring{\labbooksubtitle}{}{}{\Large \labbooksubtitle \\}
+\huge\vspace{1cm} Practical Labs}
+\def \trainingurl{https://bootlin.com/doc/training/__SESSION_NAME__}
+\date{\lastupdateen{}}
+
+\begin{document}
+\maketitle
+
+\makeabout
+
