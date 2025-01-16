@@ -66,7 +66,10 @@
 \newcommand{\codelink}[1]{\texttt{#1}}
 \newcommand{\code}[1] {\path{#1}}
 \newcommand\projdir[2]{\href{https://elixir.bootlin.com/#1/latest/source/#2/}{\codelink{#2/}}}
+\newcommand\projfile[2]{\href{https://elixir.bootlin.com/#1/latest/source/#2}{\codelink{#2}}}
+\newcommand\kconfigval[2]{\href{https://elixir.bootlin.com/linux/latest/K/ident/#1}{\codelink{#1=#2}}}
 \newcommand\kdir[1]{\projdir{linux}{#1}}
+\newcommand\kfile[1]{\projfile{linux}{#1}}
 
 \begin{document}
 
@@ -79,7 +82,7 @@
 %\tableofcontents
 %\end{frame}
 
-
+\newcommand{\training}{linux-kernel}
 \graphicspath{{trainingmaterials/}}
 \input{trainingmaterials/slides/sysdev-intro/sysdev-intro}
 \input{trainingmaterials/slides/sysdev-dev-environment/sysdev-dev-environment}
@@ -89,11 +92,11 @@
 \input{trainingmaterials/slides/sysdev-toolchains-obtaining/sysdev-toolchains-obtaining}
 \input{trainingmaterials/slides/sysdev-bootloaders-title/sysdev-bootloaders-title}
 \input{trainingmaterials/slides/sysdev-bootloaders-sequence/sysdev-bootloaders-sequence}
-%\input{trainingmaterials/slides/sysdev-linux-intro-title/sysdev-linux-intro-title}
-%\input{trainingmaterials/slides/sysdev-linux-intro-features/sysdev-linux-intro-features}
-%\input{trainingmaterials/slides/sysdev-linux-intro-versioning/sysdev-linux-intro-versioning}
-%\input{trainingmaterials/slides/sysdev-linux-intro-sources/sysdev-linux-intro-sources}
-%\input{trainingmaterials/slides/sysdev-kernel-building/sysdev-kernel-building}
+\input{trainingmaterials/slides/sysdev-linux-intro-title/sysdev-linux-intro-title}
+\input{trainingmaterials/slides/sysdev-linux-intro-features/sysdev-linux-intro-features}
+\input{trainingmaterials/slides/sysdev-linux-intro-versioning/sysdev-linux-intro-versioning}
+\input{trainingmaterials/slides/sysdev-linux-intro-sources/sysdev-linux-intro-sources}
+\input{trainingmaterials/slides/sysdev-kernel-building/sysdev-kernel-building}
 %\input{trainingmaterials/slides/sysdev-kernel-booting/sysdev-kernel-booting}
 %\input{trainingmaterials/slides/sysdev-root-filesystem-title/sysdev-root-filesystem-title}
 %\input{trainingmaterials/slides/sysdev-root-filesystem-principles/sysdev-root-filesystem-principles}
