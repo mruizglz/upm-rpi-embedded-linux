@@ -24,14 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-                  - name: LaTeX compilation
-  # You may pin to the exact commit or the version.
-  # uses: dante-ev/latex-action@49cf7cb5f79e7b2006dbdffea85e02bec0b6244b
-  uses: dante-ev/latex-action@2021-A
-  with:
-    # The root LaTeX file to be compiled
-    root_file: embeddedlinux.tex
-    # The working directory for the latex compiler to be invoked
+      
+      - name: LaTeX compilation
+        # You may pin to the exact commit or the version.
+        # uses: dante-ev/latex-action@49cf7cb5f79e7b2006dbdffea85e02bec0b6244b
+        uses: dante-ev/latex-action@2021-A
+        with:
+          # The root LaTeX file to be compiled
+          root_file: embeddedlinux.tex
+          # The working directory for the latex compiler to be invoked
    
           
