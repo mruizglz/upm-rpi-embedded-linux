@@ -37,6 +37,18 @@ jobs:
         with:
           name: UPM-RPI-embeddedLinux.pdf
           path: embeddedlinux.pdf
+          
+      - name: Create Release 
+        id: create_release 
+        uses: actions/create-release@v1 
+        with: 
+             tag_name: ${{ github.ref }} 
+             release_name: Release ${{ github.ref }} 
+             draft: false 
+             prerelease: false 
+             body: | 
+                Release notes for ${{ github.ref }}
+                
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1 
         with: 
