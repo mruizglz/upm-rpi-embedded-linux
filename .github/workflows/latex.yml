@@ -37,4 +37,11 @@ jobs:
         with:
           name: UPM-RPI-embeddedLinux.pdf
           path: embeddedlinux.pdf
+      - name: Upload Release Asset 
+        uses: actions/upload-release-asset@v1 
+        with: 
+          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          asset_path: embeddedlinux.pdf 
+          asset_name: UPM-RPI-embeddedLinux.pdf 
+          asset_content_type: application/pdf
               
