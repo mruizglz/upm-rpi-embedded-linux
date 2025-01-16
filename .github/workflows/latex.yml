@@ -48,7 +48,9 @@ jobs:
              prerelease: false 
              body: | 
                 Release notes for ${{ github.ref }}
-                
+        env: 
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+           
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1 
         with: 
@@ -56,4 +58,7 @@ jobs:
           asset_path: embeddedlinux.pdf 
           asset_name: UPM-RPI-embeddedLinux.pdf 
           asset_content_type: application/pdf
+        env: 
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           
               
