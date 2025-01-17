@@ -52,6 +52,8 @@ jobs:
       - name: Delete Release
         run:
            gh release delete 1.0 -y
+        env: 
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
            
       - name: Create Release 
         id: create_release 
