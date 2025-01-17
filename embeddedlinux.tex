@@ -64,13 +64,21 @@
     \tableofcontents[currentsection, hideallsubsections]
   \end{frame}
 }
-\newcommand{\codelink}[1]{\texttt{#1}}
-\newcommand{\code}[1] {\path{#1}}
+%\newcommand{\codelink}[1]{\texttt{#1}}
+
+\newcommand{\codecolor}{\usebeamercolor[fg]{code}}
+\newcommand{\code}[1]{{\codecolor \path{#1}}}
+\newcommand{\codelink}[1]{{\usebeamercolor[fg]{darkblue} \path{#1}}}
+\newcommand{\codewithhash}[1]{{\codecolor \tt{#1}}}
+%\newcommand{\code}[1] {\path{#1}}
+
 \newcommand\projdir[2]{\href{https://elixir.bootlin.com/#1/latest/source/#2/}{\codelink{#2/}}}
 \newcommand\projfile[2]{\href{https://elixir.bootlin.com/#1/latest/source/#2}{\codelink{#2}}}
+\newcommand\kconfig[1]{\href{https://elixir.bootlin.com/linux/latest/K/ident/#1}{\codelink{#1}}}
 \newcommand\kconfigval[2]{\href{https://elixir.bootlin.com/linux/latest/K/ident/#1}{\codelink{#1=#2}}}
 \newcommand\kdir[1]{\projdir{linux}{#1}}
 \newcommand\kfile[1]{\projfile{linux}{#1}}
+\newcommand\kdochtml[1]{\href{https://www.kernel.org/doc/html/latest/#1.html}{\codelink{#1}}}
 
 \begin{document}
 
@@ -100,7 +108,7 @@
 \input{trainingmaterials/slides/sysdev-kernel-building/sysdev-kernel-building}
 \input{trainingmaterials/slides/sysdev-kernel-booting/sysdev-kernel-booting}
 \input{trainingmaterials/slides/sysdev-root-filesystem-title/sysdev-root-filesystem-title}
-%\input{trainingmaterials/slides/sysdev-root-filesystem-principles/sysdev-root-filesystem-principles}
+\input{trainingmaterials/slides/sysdev-root-filesystem-principles/sysdev-root-filesystem-principles}
 %\input{trainingmaterials/slides/sysdev-root-filesystem-contents/sysdev-root-filesystem-contents}
 
 
