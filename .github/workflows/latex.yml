@@ -52,7 +52,7 @@ jobs:
       - name: Delete Release
         run:
            #gh release delete 1.0 -y
-           gh api -X DELETE repos/${{ github.repository }}/git/refs/tags/1.0
+           gh api -X DELETE repos/${{ github.repository }}/git/refs/tags/1
         env: 
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
            
