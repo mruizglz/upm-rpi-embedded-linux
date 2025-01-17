@@ -32,12 +32,13 @@ jobs:
         with:
           # The root LaTeX file to be compiled
           root_file: embeddedlinux.tex
-          args: -pdf -f
           # The working directory for the latex compiler to be invoked
+          
       - uses: actions/upload-artifact@v4
         with:
           name: UPM-RPI-embeddedLinux.pdf
           path: embeddedlinux.pdf
+          
       - uses: actions/upload-artifact@v4 
         with:
           name: UPM-RPI-embeddedLinux.log
