@@ -35,7 +35,9 @@ jobs:
         with:
           # The root LaTeX file to be compiled
           root_file: embeddedlinux.tex
+          args: -pdf -shell-escape -f
           # The working directory for the latex compiler to be invoked
+          working_directory: .
           
       - uses: actions/upload-artifact@v4
         with:
