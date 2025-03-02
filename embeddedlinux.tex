@@ -36,6 +36,7 @@
 \usepackage{bm}
 \usepackage{listings}
 \usepackage{minted}
+\usepackage{tabularx}
 \usepackage{hyperref} %always the last to avoid problems
 
 
@@ -61,6 +62,7 @@
 {
   \begin{frame}<beamer>
    % \frametitle{Section \thesection} %this add the section number only
+   \tiny
    \frametitle{\insertsectionhead}
     \tableofcontents[currentsection, hideallsubsections]
   \end{frame}
@@ -118,7 +120,10 @@
 \input{trainingmaterials/slides/boot-sequence-initramfs/boot-sequence-initramfs}
 \input{trainingmaterials/slides/sysdev-busybox/sysdev-busybox}
 \input{trainingmaterials/slides/sysdev-hw-devices/sysdev-hw-devices}
-
+\input{trainingmaterials/slides/buildroot-yocto-introduction/buildroot-yocto-introduction}
+\input{trainingmaterials/slides/buildroot-introduction/buildroot-introduction}
+\input{trainingmaterials/slides/buildroot-build/buildroot-build}
+\input{trainingmaterials/slides/buildroot-tree/buildroot-tree}
 
 
 %------------------------------------------------
@@ -133,5 +138,3 @@
 
 \end{document}
 
-
-\end{document}
